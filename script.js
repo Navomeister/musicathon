@@ -12,7 +12,6 @@ function loadPreset() {
 }
 
 function carregaFontes(json) {
-    console.log(json);
     fontes = json
 }
 
@@ -65,9 +64,7 @@ function desmuta() {
 function tocaNota() {
     var nota = Math.floor(46 * Math.random())
     nota > 0 ? document.getElementById(nota).play() : null
-    strTempo.style.fontFamily = fontes[Math.abs(nota - 1)]
-    console.log(strTempo.style.fontFamily);
-    
+    strTempo.style.fontFamily = fontes[Math.abs(nota - 1)]    
     notasSessao.push(nota)
 }
 
