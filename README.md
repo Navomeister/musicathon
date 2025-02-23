@@ -2,6 +2,8 @@
 
 <a href="https://navomeister.github.io/musicathon/">Acesse aqui</a>
 
+<a href="https://subathon-api.justdavi.dev/api/docs">API da subathon (por justdavi)</a>
+
 ## O que é?
 É um site simples, apenas uma caixa de música que acompanha o timer da subathon. Ela toca uma nota por segundo. E tem fontes engraçadas!!!
 
@@ -12,7 +14,7 @@ Pra... ouvir!
 Provavelmente quebra eu não coloquei nenhuma medida de segurança pra isso :3
 
 ## Que negócio aleatório, tu não tinha nada melhor pra fazer não?
-Tinha! Só que eu fiz isso aqui ao invés das minhas obrigações!!
+Tinha! Só que eu fiz isso aqui ao invés das minhas obrigações!! Me veio a ideia porque baixei um vst de caixa de música aí pensei "Por que não?". 
 
 ## Acabaram de doar e não atualizou, que que tu fez aí??
 Eu botei pra puxar a API a cada 20 segundos pra não sobrecarregar! Quando tiver muitos projetos da comunidade provavelmente vai fazer alguma diferença. talvez..
