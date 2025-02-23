@@ -1,14 +1,13 @@
 var segundos, minutos, horas, fontes
 const strTempo = document.getElementById("tempo")
-const notasSessao = ["0"]
 const botao = document.getElementById("botaoTempo")
 const numNotas = 46
 
-document.addEventListener("DOMContentLoaded", () => criaNotas())
+document.addEventListener("DOMContentLoaded", () => loadPreset())
 
 function loadPreset() {
     criaNotas()
-    apis()
+    criaLinhas()
 }
 
 function carregaFontes(json) {
@@ -25,14 +24,35 @@ function tempo(milisegundos) {
 
 function criaNotas() {
     const caixa = document.getElementById("caixa")
-    for (let i = 1; i < 46; i++) {
+    for (let i = 0; i < numNotas; i++) {
         const nota = document.createElement("audio")
         nota.classList = "notas"
-        nota.id = i
-        nota.src = "./notas/caixa-" + i + ".wav"
+        nota.id = i + 1
+        nota.src = "./notas/caixa-" + (i + 1) + ".wav"
         caixa.appendChild(nota)
     }
 }
+
+function criaLinhas() {
+    const linhas = document.getElementById("linhas")
+    for (let i = 0; i < numNotas; i++) {
+        const linha = document.createElement("span")
+        linha.classList.add("linha")
+        linha.id = "linha" + i
+        linhas.appendChild(linha)
+    }
+}
+
+function criaPonto(num) {
+    const linha = document.getElementById("linha" + num)
+    const ponto = document.createElement("span")
+    ponto.classList.add("ponto")
+    ponto.addEventListener("animationend", () => {
+        ponto.remove()
+    })
+    linha.appendChild(ponto)
+}
+
 
 function diminui() {
     if (segundos > 0) {
@@ -62,10 +82,18 @@ function desmuta() {
 }
 
 function tocaNota() {
-    var nota = Math.floor(46 * Math.random())
-    nota > 0 ? document.getElementById(nota).play() : null
-    strTempo.style.fontFamily = fontes[Math.abs(nota - 1)]    
-    notasSessao.push(nota)
+    var nota = Math.floor(numNotas * Math.random())
+    nota > 0 ? (document.getElementById(nota).currentTime = 0, document.getElementById(nota).play(), criaPonto(nota)) : null
+    try {
+        trocaFonte()
+    } catch (error) {
+        null
+    }
+}
+
+function trocaFonte() {
+    let fonte = Math.floor(numNotas * Math.random())
+    strTempo.style.fontFamily = fontes[Math.abs(fonte - 1)] 
 }
 
 setInterval(diminui, 1000)
