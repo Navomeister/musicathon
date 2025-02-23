@@ -1,230 +1,276 @@
 @font-face {
     font-family: 'midnight'; 
     src: url('./fontes/ultimate\ MIDNIGHT.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'cake'; 
     src: url('./fontes/BABYCAKE.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'baby'; 
     src: url('./fontes/BABYK___.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'space'; 
     src: url('./fontes/SpaceOutOpen.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'gattino'; 
     src: url('./fontes/bigattino.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'fish'; 
     src: url('./fontes/bigfish.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'sonmopeds'; 
     src: url('./fontes/BLACKBOYSONMOPEDS.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'broken'; 
     src: url('./fontes/BROKENTOYS.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'bull'; 
     src: url('./fontes/BULLDOZER.otf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'candy'; 
     src: url('./fontes/CANDYRAN.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'cartoon1'; 
     src: url('./fontes/Cartoon_Regular.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'cartoon2'; 
     src: url('./fontes/Cartoonia_3D.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'cave'; 
     src: url('./fontes/CAVEMAN_.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'cheese'; 
     src: url('./fontes/CHEESEBU.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'cheri'; 
     src: url('./fontes/CHERI___.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'chubby'; 
     src: url('./fontes/CHUBBY.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'clink'; 
     src: url('./fontes/ClinkClank.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'tartar'; 
     src: url('./fontes/tartar_sauce_erc.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'eye'; 
     src: url('./fontes/EYESIS__.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'fairy'; 
     src: url('./fontes/fairlyoddfont.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'doll'; 
     src: url('./fontes/Font_Doll.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'grinch'; 
     src: url('./fontes/GrinchedRegular.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'island'; 
     src: url('./fontes/Island\ of\ Misfit\ Toys.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'jelly'; 
     src: url('./fontes/JELLYBELLY.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'jellyka'; 
     src: url('./fontes/Jellyka_Castle\ _s_Queen.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'kartoon'; 
     src: url('./fontes/kartoons.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'kill'; 
     src: url('./fontes/Kill.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'kitsu'; 
     src: url('./fontes/Kitsu_XD.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'lambada'; 
     src: url('./fontes/LambadaDexter.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'tweedy'; 
     src: url('./fontes/Tweedy_erc_01.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'loco'; 
     src: url('./fontes/loco_tv.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'mad'; 
     src: url('./fontes/MadScience.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'mandingo'; 
     src: url('./fontes/MANDINGO.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'mario'; 
     src: url('./fontes/MarioLuigi2.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'turtle'; 
     src: url('./fontes/MYTURTLE.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'pokemon'; 
     src: url('./fontes/Pokemon\ Hollow.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'fiestas'; 
     src: url('./fontes/Sala\ de\ Fiestas.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'shark2'; 
     src: url('./fontes/Shark_Random_Funnyness.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'shark3'; 
     src: url('./fontes/SHARKBAIT.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'shark5'; 
     src: url('./fontes/sharkheavyabc.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'snot'; 
     src: url('./fontes/SNOT____.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'toonish'; 
     src: url('./fontes/TOONISH.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'yahoo'; 
     src: url('./fontes/Yahoo.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'caveirada'; 
     src: url('./fontes/vtks\ caveirada.ttf'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'toontime'; 
     src: url('./fontes/TOONTIME.TTF'); 
+    font-display: swap;
 }
 
 @font-face {
     font-family: 'turtles'; 
     src: url('./fontes/Turtles.ttf'); 
+    font-display: swap;
 }
 
