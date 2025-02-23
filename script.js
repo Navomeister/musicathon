@@ -30,7 +30,7 @@ function criaNotas() {
         const nota = document.createElement("audio")
         nota.classList = "notas"
         nota.id = i
-        nota.src = "/notas/caixa-" + i + ".wav"
+        nota.src = "notas/caixa-" + i + ".wav"
         caixa.appendChild(nota)
     }
 }
