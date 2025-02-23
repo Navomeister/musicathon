@@ -124,7 +124,7 @@ fetch("https://subathon-api.justdavi.dev/api/time-left")
 .then(data => tempo(data.timeLeft))
 
 // fetch das fontes p/ armazenar na variável
-fetch("http://127.0.0.1:5500/fontes.json")
+fetch("./fontes.json")
 .then(response => response.json())
 .then(data => carregaFontes(data)
 )
