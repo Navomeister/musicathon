@@ -2,6 +2,14 @@ var segundos, minutos, horas, fontes
 const strTempo = document.getElementById("tempo")
 const botao = document.getElementById("botaoTempo")
 const numNotas = 46
+// intervalo pra diminuir o tempo do timer e tocar uma nota.
+var intSegundos = setInterval(diminui, 1000)
+// intervalo pra chamar a API do timer
+var intApi = setInterval(() => {
+    fetch("https://subathon-api.justdavi.dev/api/time-left")
+        .then(response => response.json())
+        .then(data => tempo(data.timeLeft))}, 20000
+)
 
 // carrega os presets quando a página carregar
 document.addEventListener("DOMContentLoaded", () => loadPreset())
@@ -15,6 +23,20 @@ function loadPreset() {
 // função p/ armazenar as fontes engraçadas em uma variável
 function carregaFontes(json) {
     fontes = json
+}
+
+function checkInicial(dadosApi) {
+    if (!isNaN(dadosApi) && dadosApi > 0) {
+        trocaFonte()
+        tempo(dadosApi)
+        }
+    else{
+        clearInterval(intSegundos)
+        clearInterval(intApi)
+        strTempo.innerText = "A Subathon acabou! Até mais Meiaum o/"
+        strTempo.style.textAlign = "center"
+        botao.remove()
+    }
 }
 
 // função p/ colocar o tempo da subathon quando carregar o site
@@ -63,23 +85,34 @@ function criaPonto(num) {
 
 // função pra diminuir o tempo pra não sobrecarregar a API do davi tmj man satisfação
 function diminui() {
-    if (segundos > 0) {
-        segundos--
+    if (segundos <= 0 && minutos <= 0 && horas <= 0) {
+        clearInterval(intSegundos)
+        clearInterval(intApi)
+        strTempo.innerText = "A Subathon acabou! Até mais Meiaum o/"
+        strTempo.style.textAlign = "center"
+        strTempo.fontFamily = fontes[16]
+        botao.remove()
+        
     }
-    else {
-        segundos = 59
-        if (minutos > 0) {
-            minutos--
-        } else {
-            minutos = 59
-            horas--
+    else{
+        if (segundos > 0) {
+            segundos--
         }
+        else {
+            segundos = 59
+            if (minutos > 0) {
+                minutos--
+            } else {
+                minutos = 59
+                horas--
+            }
+        }
+        strTempo.innerText = ((horas < 10 ? "0" + horas : horas) + ":" + (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos));
+        // chance de tocar duas notas ao mesmo tempo. 
+        const zerinhoouum = Math.random()
+        zerinhoouum < .75 ? tocaNota() :  (tocaNota(), tocaNota())
     }
-    strTempo.innerText = ((horas < 10 ? "0" + horas : horas) + ":" + (minutos < 10 ? "0" + minutos : minutos) + ":" + (segundos < 10 ? "0" + segundos : segundos));
     
-    // chance de tocar duas notas ao mesmo tempo. 
-    const zerinhoouum = Math.random()
-    zerinhoouum < .75 ? tocaNota() :  (tocaNota(), tocaNota())
 }
 
 // botão só pra interação com o site, pra caso esteja mutado automático pelo navegador
@@ -108,20 +141,10 @@ function trocaFonte() {
     strTempo.style.fontFamily = fontes[Math.abs(fonte - 1)] 
 }
 
-// intervalo pra diminuir o tempo do timer e tocar uma nota.
-setInterval(diminui, 1000)
-
-// intervalo pra chamar a API do timer
-setInterval(() => {
-    fetch("https://subathon-api.justdavi.dev/api/time-left")
-        .then(response => response.json())
-        .then(data => tempo(data.timeLeft))}, 20000
-)
-
 // fetch inicial p/ colocar o timer na tela
 fetch("https://subathon-api.justdavi.dev/api/time-left")
 .then(response => response.json())
-.then(data => tempo(data.timeLeft))
+.then(data => checkInicial(data.timeLeft))
 
 // fetch das fontes p/ armazenar na variável
 fetch("http://127.0.0.1:5500/fontes.json")
